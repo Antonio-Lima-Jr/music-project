@@ -1,0 +1,57 @@
+.fretboard {
+  width: 100%;
+  background-color: #1c05f3;
+  box-sizing: border-box;
+  margin-top: 16px;
+
+  .fretboard-container {
+    display: flex;
+    align-items: flex-start;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    background-color: #cc6b6b;
+    box-sizing: border-box;
+
+    .rope-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: absolute;
+      box-sizing: border-box;
+      top: 5%;
+      width: 100%;
+      height: 90%;
+
+      .rope {
+        width: 100%;
+        height: 2px;
+        background-color: #000;
+      }
+    }
+
+    .fret {
+      position: relative;
+      box-sizing: border-box;
+      width: 6%;
+      height: 100%;
+      border-left-style: solid;
+      border-right-style: solid;
+      margin-right: -1px;
+
+      &:after {
+        content: attr(data-fret);
+        font-size: 15px;
+        position: absolute;
+        top: -16px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-weight: bold;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
