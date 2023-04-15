@@ -1,8 +1,29 @@
 .fretboard {
   width: 100%;
-  background-color: #1c05f3;
   box-sizing: border-box;
   margin-top: 16px;
+  display: flex;
+  flex-direction: row;
+
+  .nutt {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .notes-nutt {
+      height: 100%;
+      width: 100%;
+      background-color: #fff;
+      border-radius: 50%;
+      box-sizing: border-box;
+      border: 1px solid #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+  }
 
   .fretboard-container {
     display: flex;
@@ -33,7 +54,7 @@
     .fret {
       position: relative;
       box-sizing: border-box;
-      width: 5%;
+      width: 100%;
       height: 100%;
       border-left-style: solid;
       border-right-style: solid;

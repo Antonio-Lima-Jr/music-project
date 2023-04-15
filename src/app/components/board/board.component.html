@@ -1,4 +1,8 @@
 <div class="fretboard" [ngStyle]="{ height: heigth }">
+  <div class="nutt">
+    <div class="notes-nutt" *ngFor="let note of getNotesToFret(0); let i = index">{{note}}</div>
+
+  </div>
   <div class="fretboard-container">
     <div class="rope-container">
       <div class="rope"></div>
@@ -12,7 +16,7 @@
     <div
       class="fret fret-{{ fret }}"
       [attr.data-fret]="fret"
-      *ngFor="let fret of counter(24)"
+      *ngFor="let fret of counter(numberFrets)"
     >
       <div
         class="note note-{{ i }}"
