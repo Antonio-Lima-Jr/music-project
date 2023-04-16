@@ -1,10 +1,161 @@
-.green {
-  background-color: #00ff00;
-}
-
 .white {
   background-color: #ffffff;
 }
+
+.green {
+  background-color: #00ff00;
+  color: black;
+}
+
+.red {
+  background-color: #ff0000;
+  color: white;
+}
+
+.yellow {
+  background-color: #ffff00;
+  color: black;
+}
+
+.blue {
+  background-color: #0000ff;
+  color: white;
+}
+
+.greenAndRed {
+  background-image: linear-gradient(#0f0 0, #0f0 100%),
+    linear-gradient(#f00 0, #f00 100%), linear-gradient(#0f0 0, #0f0 100%),
+    linear-gradient(#0f0 0, #0f0 100%);
+  background-size: 50% 50%;
+  background-position: top left, top right, bottom right, bottom left;
+  background-repeat: no-repeat;
+}
+
+.greenAndYellow {
+  background-image: linear-gradient(#0f0 0, #0f0 100%),
+    linear-gradient(#0f0 0, #0f0 100%), linear-gradient(#ff0 0, #ff0 100%),
+    linear-gradient(#0f0 0, #0f0 100%);
+  background-size: 50% 50%;
+  background-position: top left, top right, bottom right, bottom left;
+  background-repeat: no-repeat;
+}
+
+.greenAndBlue {
+  background-image: linear-gradient(#0f0 0, #0f0 100%),
+    linear-gradient(#0f0 0, #0f0 100%), linear-gradient(#0f0 0, #0f0 100%),
+    linear-gradient(#00f 0, #00f 100%);
+  background-size: 50% 50%;
+  background-position: top left, top right, bottom right, bottom left;
+  background-repeat: no-repeat;
+}
+
+.redAndYellow {
+  background-image: linear-gradient(#ff0 0, #ff0 100%),
+    linear-gradient(#f00 0, #f00 100%), linear-gradient(#f00 0, #f00 100%),
+    linear-gradient(#ff0 0, #ff0 100%);
+  background-size: 50% 50%;
+  background-position: top left, top right, bottom right, bottom left;
+  background-repeat: no-repeat;
+}
+
+.redAndBlue {
+  background-image: linear-gradient(#f00 0, #f00 100%),
+    linear-gradient(#00f 0, #00f 100%), (#00f 0, #00f 100%),
+    linear-gradient(#f00 0, #f00 100%);
+  background-size: 50% 50%;
+  background-position: top left, top right, bottom right, bottom left;
+  background-repeat: no-repeat;
+}
+
+.yellowAndBlue {
+  background-image: linear-gradient(#ff0 0, #ff0 100%),
+    linear-gradientlinear-gradient(#00f 0, #00f 100%),
+    linear-gradient(#00f 0, #00f 100%), linear-gradient(#ff0 0, #ff0 100%);
+  background-size: 50% 50%;
+  background-position: top left, top right, bottom right, bottom left;
+  background-repeat: no-repeat;
+}
+
+.greenAndRedAndYellow {
+  background-image: linear-gradient(#0f0 0, #0f0 100%),
+    linear-gradient(#f00 0, #f00 100%), linear-gradient(#ff0 0, #ff0 100%),
+    linear-gradient(#0f0 0, #0f0 100%);
+  background-size: 50% 50%;
+  background-position: top left, top right, bottom right, bottom left;
+  background-repeat: no-repeat;
+}
+
+.greenAndRedAndBlue {
+  background-image: linear-gradient(#0f0 0, #0f0 100%),
+    linear-gradient(#f00 0, #f00 100%), linear-gradient(#0f0 0, #0f0 100%),
+    linear-gradient(#00f 0, #00f 100%);
+  background-size: 50% 50%;
+  background-position: top left, top right, bottom right, bottom left;
+  background-repeat: no-repeat;
+}
+ .greenAndYellowAndBlue{
+  background-image: linear-gradient(#0f0 0, #0f0 100%),
+    linear-gradient(#0f0 0, #0f0 100%), linear-gradient(#ff0 0, #ff0 100%),
+    linear-gradient(#00f 0, #00f 100%);
+  background-size: 50% 50%;
+  background-position: top left, top right, bottom right, bottom left;
+  background-repeat: no-repeat;
+ }
+
+ .redAndYellowAndBlue{
+  background-image: linear-gradient(#ff0 0, #ff0 100%),
+    linear-gradient(#f00 0, #f00 100%), linear-gradient(#f00 0, #f00 100%),
+    linear-gradient(#00f 0, #00f 100%);
+  background-size: 50% 50%;
+  background-position: top left, top right, bottom right, bottom left;
+  background-repeat: no-repeat;
+ }
+
+ .greenAndRedAndYellowAndBlue{
+  background-image: linear-gradient(#0f0 0, #0f0 100%),
+    linear-gradient(#f00 0, #f00 100%), linear-gradient(#ff0 0, #ff0 100%),
+    linear-gradient(#00f 0, #00f 100%);
+  background-size: 50% 50%;
+  background-position: top left, top right, bottom right, bottom left;
+  background-repeat: no-repeat;
+ }
+// .twoCompositionBackgroundFourScale {
+//   background-image: linear-gradient(#0f0 0, #0f0 100%),
+//     linear-gradient(#00f 0, #00f 100%), linear-gradient(#00f 0, #00f 100%),
+//     linear-gradient(#0f0 0, #0f0 100%);
+//   background-size: 50% 50%;
+//   background-position: top left, top right, bottom right, bottom left;
+//   background-repeat: no-repeat;
+// }
+
+// .threeCompositionBackgroundTwoScaleAndThreeScale {
+//   background-image: linear-gradient(#0f0 0, #0f0 100%),
+//     linear-gradient(#f00 0, #f00 100%), linear-gradient(#ff0 0, #ff0 100%),
+//     linear-gradient(#0f0 0, #0f0 100%);
+//   background-size: 50% 50%;
+//   background-position: top left, top right, bottom right, bottom left;
+//   background-repeat: no-repeat;
+// }
+
+// .threeCompositionBackgroundTwoScaleAndFourScale {
+//   background-image: linear-gradient(#0f0 0, #0f0 100%),
+//     linear-gradient(#f00 0, #f00 100%), linear-gradient(#00f 0, #00f 100%),
+//     linear-gradient(#0f0 0, #0f0 100%);
+//   background-size: 50% 50%;
+//   background-position: top left, top right, bottom right, bottom left;
+//   background-repeat: no-repeat;
+// }
+
+// .fourCompositionBackground {
+//   background-image:
+//     linear-gradient(#0f0 0, #0f0 100%),
+//     linear-gradient(#f00 0, #f00 100%),
+//     linear-gradient(#ff0 0, #ff0 100%),
+//     linear-gradient(#00f 0, #00f 100%);
+//   background-size: 50% 50%;
+//   background-position: top left, top right, bottom right, bottom left;
+//   background-repeat: no-repeat;
+// }
 
 .fretboard {
   width: 100%;

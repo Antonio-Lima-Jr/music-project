@@ -17,5 +17,8 @@ export class AppComponent {
     4: 'A',
     5: 'E',
   };
-  scale: string[] = ['C', 'E', 'G', 'B'];
+  scale: string[] = ['C', 'D', 'E', 'F', 'G', 'A', 'B'];
+  scaleTwo: string[] = ['C', 'E', 'G'];
+  scaleThree: string[] = ['G','B', 'D', 'F' ];
+  scaleFour: string[] = ['D', 'F', 'A',];
 }

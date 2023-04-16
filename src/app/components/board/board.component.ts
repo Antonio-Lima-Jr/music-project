@@ -14,10 +14,16 @@ export class BoardComponent implements OnInit {
   notasBoardDefault: Board = {};
   @Input() customTuning?: DictString;
   @Input() numberFrets = 12;
-  @Input() heigth = '200px';
+  @Input() heigth = '170px';
   @Input() tonica: string = 'C';
   @Input() scaleType: string = 'major'; // major, menorNatural, menorHarmonic, menorMelodic
+  @Input() colorScale = 'green';
   @Input() scale: string[] = [];
+  @Input() scaleTwo: string[] = [];
+  @Input() scaleThree: string[] = [];
+  @Input() scaleFour: string[] = [];
+  @Input() isMultipleScales: boolean = false;
+
 
   ngOnInit(): void {
     this.notasBoardDefault = this.createBoard();
@@ -71,10 +77,65 @@ export class BoardComponent implements OnInit {
   }
 
   verifyIfNoteIsInScale(note: string): string[] {
-    let indexNote = this.scale.indexOf(note);
-    if (indexNote === -1) {
+    let indexScale = this.scale.indexOf(note);
+    let indexScaleTwo = this.scaleTwo.indexOf(note);
+    let indexScaleThree = this.scaleThree.indexOf(note);
+    let indexScaleFour = this.scaleFour.indexOf(note);
+    if (indexScale === -1 && indexScaleTwo === -1 && indexScaleThree === -1 ) {
       return ['white'];
     }
-    return ['green'];
+    if (this.isMultipleScales){
+      if (indexScale !== -1 && indexScaleTwo === -1 && indexScaleThree === -1 && indexScaleFour === -1) {
+        return ["green"];
+      }
+      if (indexScale === -1 && indexScaleTwo !== -1 && indexScaleThree === -1 && indexScaleFour === -1) {
+        return ['red']
+      }
+      if (indexScale === -1 && indexScaleTwo === -1 && indexScaleThree !== -1 && indexScaleFour === -1) {
+        return ['yellow']
+      }
+      if (indexScale === -1 && indexScaleTwo === -1 && indexScaleThree === -1 && indexScaleFour !== -1) {
+        return ['blue']
+      }
+      if (indexScale !== -1 && indexScaleTwo !== -1 && indexScaleThree === -1 && indexScaleFour === -1) {
+        return ['greenAndRed'];
+      }
+      if (indexScale !== -1 && indexScaleTwo === -1 && indexScaleThree !== -1 && indexScaleFour === -1) {
+        return ['greenAndYellow'];
+      }
+      if (indexScale !== -1 && indexScaleTwo === -1 && indexScaleThree === -1 && indexScaleFour !== -1) {
+        return ['greenAndBlue'];
+      }
+      if (indexScale === -1 && indexScaleTwo !== -1 && indexScaleThree !== -1 && indexScaleFour === -1) {
+        return ['redAndYellow'];
+      }
+      if (indexScale === -1 && indexScaleTwo !== -1 && indexScaleThree === -1 && indexScaleFour !== -1) {
+        return ['redAndBlue'];
+      }
+      if (indexScale === -1 && indexScaleTwo === -1 && indexScaleThree !== -1 && indexScaleFour !== -1) {
+        return ['yellowAndBlue'];
+      }
+      if (indexScale !== -1 && indexScaleTwo !== -1 && indexScaleThree !== -1 && indexScaleFour === -1) {
+        return ['greenAndRedAndYellow'];
+      }
+      if (indexScale !== -1 && indexScaleTwo !== -1 && indexScaleThree === -1 && indexScaleFour !== -1) {
+        return ['greenAndRedAndBlue'];
+      }
+      if (indexScale !== -1 && indexScaleTwo === -1 && indexScaleThree !== -1 && indexScaleFour !== -1) {
+        return ['greenAndYellowAndBlue'];
+      }
+      if (indexScale === -1 && indexScaleTwo !== -1 && indexScaleThree !== -1 && indexScaleFour !== -1) {
+        return ['redAndYellowAndBlue'];
+      }
+
+      if (indexScale !== -1 && indexScaleTwo !== -1 && indexScaleThree !== -1 && indexScaleFour !== -1) {
+        return ['greenAndRedAndYellowAndBlue'];
+      }
+
+    }
+
+
+
+    return [this.colorScale];
   }
 }
