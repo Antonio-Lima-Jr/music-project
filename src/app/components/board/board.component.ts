@@ -1,10 +1,7 @@
-import { DictString } from './../../shared/notes';
+import { DictString } from '../../shared/notes';
 import { Component, Input, OnInit } from '@angular/core';
-import {
-  chromaticScale,
-  Board,
-  nuttDefaultNotes,
-} from 'src/app/shared/notes';
+import { chromaticScale, Board, nuttDefaultNotes } from 'src/app/shared/notes';
+import { GenerateScalesService } from 'src/app/shared/generate-scales.service';
 
 @Component({
   selector: 'app-board',
@@ -12,16 +9,24 @@ import {
   styleUrls: ['./board.component.scss'],
 })
 export class BoardComponent implements OnInit {
+  constructor(private generateScales: GenerateScalesService) {}
+
   notasBoardDefault: Board = {};
-
   @Input() customTuning?: DictString;
-
-  numberFrets = 24;
-
-  heigth = '120px';
+  @Input() numberFrets = 12;
+  @Input() heigth = '200px';
+  @Input() tonica: string = 'C';
+  @Input() scaleType: string = 'major'; // major, menorNatural, menorHarmonic, menorMelodic
+  @Input() scale: string[] = [];
 
   ngOnInit(): void {
     this.notasBoardDefault = this.createBoard();
+    if (this.scale.length === 0) {
+      this.scale = this.generateScales.generateScaleSevenNotes(
+        this.scaleType,
+        this.tonica
+      );
+    }
   }
 
   counter(num: number) {
@@ -63,5 +68,13 @@ export class BoardComponent implements OnInit {
     }
 
     return board;
+  }
+
+  verifyIfNoteIsInScale(note: string): string[] {
+    let indexNote = this.scale.indexOf(note);
+    if (indexNote === -1) {
+      return ['white'];
+    }
+    return ['green'];
   }
 }

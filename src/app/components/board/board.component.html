@@ -1,7 +1,12 @@
 <div class="fretboard" [ngStyle]="{ height: heigth }">
   <div class="nutt">
-    <div class="notes-nutt" *ngFor="let note of getNotesToFret(0); let i = index">{{note}}</div>
-
+    <div
+      class="notes-nutt"
+      [ngClass]="verifyIfNoteIsInScale(note)"
+      *ngFor="let note of getNotesToFret(0)"
+    >
+      {{ note }}
+    </div>
   </div>
   <div class="fretboard-container">
     <div class="rope-container">
@@ -22,7 +27,7 @@
         class="note note-{{ i }}"
         *ngFor="let note of getNotesToFret(fret); let i = index"
       >
-        <div class="note-container">
+        <div class="note-container" [ngClass]="verifyIfNoteIsInScale(note)">
           <div class="note-text">{{ note }}</div>
         </div>
       </div>

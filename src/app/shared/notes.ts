@@ -6,6 +6,10 @@ export type Board = {
   [key: number]: string[];
 };
 
+export type DictScale = {
+  [key: string]: string[];
+};
+
 export const chromaticScale: DictString = {
   0: 'C',
   1: 'C#',
@@ -30,4 +34,9 @@ export const nuttDefaultNotes: DictString = {
   5: 'E',
 };
 
-
+export const scaleShapes: DictScale = {
+  major: ['T', 'T', 'S', 'T', 'T', 'T', 'S'],
+  menorNatural: ['T', 'S', 'T', 'T', 'S', 'T', 'T'],
+  menorHarmonic: ['T', 'S', 'T', 'T', 'S', 'T', 'S'],
+  menorMelodic: ['T', 'S', 'T', 'T', 'T', 'T', 'S'],
+};

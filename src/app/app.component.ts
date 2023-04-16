@@ -17,4 +17,5 @@ export class AppComponent {
     4: 'A',
     5: 'E',
   };
+  scale: string[] = ['C', 'E', 'G', 'B'];
 }
