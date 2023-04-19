@@ -2,7 +2,10 @@
   <div class="nutt">
     <div
       class="notes-nutt"
-      [ngClass]="verifyIfNoteIsInScale(note)"
+      setCss
+      setCssNote="{{ note }}"
+      [setCssScales]="scales!"
+      [setCssColor]="colorScale"
       *ngFor="let note of getNotesToFret(0)"
     >
       {{ note }}
@@ -27,8 +30,15 @@
         class="note note-{{ i }}"
         *ngFor="let note of getNotesToFret(fret); let i = index"
       >
-        <div class="note-container" [ngClass]="verifyIfNoteIsInScale(note)">
+        <div
+          setCss
+          [setCssNote]="note"
+          [setCssScales]="scales!"
+          [setCssColor]="colorScale"
+          [setCssByInterval]="intervals[note]"
+        >
           <div class="note-text">{{ note }}</div>
+          <div class="note-grau">{{ intervals[note] }}</div>
         </div>
       </div>
     </div>
