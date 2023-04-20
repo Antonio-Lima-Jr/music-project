@@ -3,13 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BoardComponent } from './components/board/board.component';
+import { GuitarBoardComponent } from './components/guitar-board/guitar-board.component';
+
 import { ColorToNoteDirective } from './shared/colorToNote.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BoardComponent,
+    GuitarBoardComponent,
     ColorToNoteDirective
   ],
   imports: [

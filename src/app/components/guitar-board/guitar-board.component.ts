@@ -5,10 +5,10 @@ import { GenerateScalesService } from 'src/app/shared/generate-scales.service';
 
 @Component({
   selector: 'app-board',
-  templateUrl: './board.component.html',
-  styleUrls: ['./board.component.scss'],
+  templateUrl: './guitar-board.component.html',
+  styleUrls: ['./guitar-board.component.scss'],
 })
-export class BoardComponent implements OnInit {
+export class GuitarBoardComponent implements OnInit {
   constructor(private generateScales: GenerateScalesService) {}
 
   notasBoardDefault: Board = {};
