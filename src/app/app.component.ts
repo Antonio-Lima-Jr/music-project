@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { DictString } from './shared/notes';
+import { DictString, Notes } from './shared/notes';
 
 @Component({
   selector: 'app-root',
@@ -7,24 +7,12 @@ import { DictString } from './shared/notes';
 })
 export class AppComponent {
   title = 'Music';
-
-  numberFrets: number = 24;
-
-  customTuning: DictString = {
-    0: 'E',
-    1: 'C',
-    2: 'G',
-    3: 'D',
-    4: 'A',
-    5: 'E',
-  };
-  scales: string[] = ['C', 'E', 'G', 'B'];
-
-  c: string[] = ['C', 'D', 'E', 'F', 'G', 'A', 'B'];
-  dm: string[] = ['D', 'F', 'A', 'C', 'E', 'G', 'B'];
+  d: string[] = [ 'D', 'E', 'F#', 'G', 'A', 'B', 'C#'];
+  bm: string[] = ['B', 'D', 'F#', 'A', 'C#', 'E', 'G'];
   em: string[] = ['E', 'G', 'B', 'D', 'F', 'A', 'C'];
   f: string[] = ['F', 'A', 'C', 'E', 'G', 'B', 'D'];
-  g: string[] = ['G', 'B', 'D', 'F', 'A', 'C', 'E'];
+  g: string[] = ['G', 'B', 'D', 'F#', 'A', 'C#', 'E'];
   am: string[] = ['A', 'C', 'E', 'G', 'B', 'D', 'F'];
-  bm: string[] = ['B', 'D', 'F', 'A', 'C', 'E', 'G'];
+  c: string[] = ['C', 'D', 'E', 'F', 'G', 'A', 'B'];
+  gm: string[] = ['G', 'A', 'B', 'C', 'D', 'E', 'F'];
 }

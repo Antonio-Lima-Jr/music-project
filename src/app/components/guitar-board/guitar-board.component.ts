@@ -4,7 +4,7 @@ import { chromaticScale, Board, nuttDefaultNotes } from 'src/app/shared/notes';
 import { GenerateScalesService } from 'src/app/shared/generate-scales.service';
 
 @Component({
-  selector: 'app-board',
+  selector: 'app-guitar-board',
   templateUrl: './guitar-board.component.html',
   styleUrls: ['./guitar-board.component.scss'],
 })

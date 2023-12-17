@@ -10,6 +10,21 @@ export type DictScale = {
   [key: string]: string[];
 };
 
+export enum Notes {
+  C = "C",
+  Csus = "C#/Db",
+  D = "D",
+  Dsus = "D#/Eb",
+  E = "E",
+  F = "F",
+  Fsus = "F#/Gb",
+  G = "G",
+  Gsus = "G#/Ab",
+  A = "A",
+  Asus = "A#/Bb",
+  B = "B",
+}
+
 export const chromaticScale: DictString = {
   0: 'C',
   1: 'C#',

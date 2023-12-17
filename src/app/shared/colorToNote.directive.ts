@@ -49,7 +49,7 @@ export class ColorToNoteDirective implements OnInit {
 const stylesToDiv = {
   width: '100%',
   height: '100%',
-  borderRadius: '50%',
+  borderRadius: '20%',
   boxSizing: 'border-box',
   border: '1px solid #000',
   display: 'flex',
