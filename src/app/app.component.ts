@@ -6,6 +6,7 @@ import { DictString, Notes } from './shared/notes';
   templateUrl: './app.component.html',
 })
 export class AppComponent {
+  
   title = 'Music';
   d: string[] = [ 'D', 'E', 'F#', 'G', 'A', 'B', 'C#'];
   bm: string[] = ['B', 'D', 'F#', 'A', 'C#', 'E', 'G'];
