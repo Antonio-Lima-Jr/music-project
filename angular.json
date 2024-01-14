@@ -30,7 +30,12 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [  
+              "node_modules/@coderline/alphatab/dist/alphaTab.js",
+              "node_modules/@coderline/alphatab/dist/alphaTab.min.js"
+              
+
+            ]
           },
           "configurations": {
             "production": {
